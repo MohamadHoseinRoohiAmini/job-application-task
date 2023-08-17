@@ -4,7 +4,7 @@ using System;
 
 namespace Mc2.CrudTest.Application.Commands.Requests
 {
-    public class CreateCustomerRequestCommand : IRequest<Guid>
+    public class CreateCustomerCommand : IRequest<Guid>
     {
         public CreateCustomerDto? Dto { get; set; }
     }

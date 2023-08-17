@@ -11,16 +11,13 @@
 
   <ItemGroup>
     <Folder Include="Commands\Response\" />
-    <Folder Include="Profiles\" />
-    <Folder Include="Queries\Handlers\" />
     <Folder Include="Queries\Responses\" />
-    <Folder Include="Queries\Requests\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Google.LibPhoneNumber" Version="1.0.0" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
   </ItemGroup>
 
 </Project>
