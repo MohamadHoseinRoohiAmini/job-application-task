@@ -1,13 +1,16 @@
-﻿using Mc2.CrudTest.Domain.Customer.Dtoes;
-using MediatR;
+﻿using MediatR;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Mc2.CrudTest.Application.Commands.Requests
 {
     public class UpdateCustomerCommand : IRequest<Unit> 
     {
-        public UpdateCustomerDto UpdateDto { get; set; }
+        public Guid? Id { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? Email { get; set; }
+        public string? BankAccountNumber { get; set; }
     }
 }

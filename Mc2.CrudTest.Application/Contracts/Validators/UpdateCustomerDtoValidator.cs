@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
-using Mc2.CrudTest.Domain.Customer.Dtoes;
+using Mc2.CrudTest.Application.Commands.Requests;
 
 namespace Mc2.CrudTest.Application.Contracts.Validators
 {
-    public class UpdateCustomerDtoValidator : AbstractValidator<UpdateCustomerDto>
+    public class UpdateCustomerDtoValidator : AbstractValidator<UpdateCustomerCommand>
     {
         public UpdateCustomerDtoValidator()
         {

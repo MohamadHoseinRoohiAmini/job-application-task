@@ -1,5 +1,6 @@
 using Mc2.CrudTest.Application;
 using Mc2.CrudTest.Data;
+using Microsoft.OpenApi.Models;
 
 namespace Mc2.CrudTest.Presentation
 {
@@ -14,6 +15,12 @@ namespace Mc2.CrudTest.Presentation
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
 
+            builder.Services.AddControllers();
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Mc2.CrudTest.Api", Version = "v1" });
+            });
+
             builder.Services.ConfigureDataServices(builder.Configuration);
             builder.Services.ConfigureApplicationServices();
 
@@ -23,6 +30,8 @@ namespace Mc2.CrudTest.Presentation
             if (app.Environment.IsDevelopment())
             {
                 app.UseWebAssemblyDebugging();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
             else
             {

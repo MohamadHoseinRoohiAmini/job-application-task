@@ -29,14 +29,14 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
         public async Task<Unit> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
         {
             var validator = new UpdateCustomerDtoValidator();
-            var validationResult = await validator.ValidateAsync(request.UpdateDto);
+            var validationResult = await validator.ValidateAsync(request);
 
             if (!validationResult.IsValid)
                 throw new CustomerDataNotValidateForUpdateException();
 
             try
             {
-                var number = _phoneNumberUtil.parse(request.UpdateDto.PhoneNumber, "US"); // can be any country
+                var number = _phoneNumberUtil.parse(request.PhoneNumber, "US"); // can be any country
                 if (!_phoneNumberUtil.isValidNumber(number) || _phoneNumberUtil.getNumberType(number) != PhoneNumberType.MOBILE)
                 {
                     throw new PhoneNumberNotValidException();
@@ -47,9 +47,9 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
                 throw new PhoneNumberNotValidException();
             }
 
-            var customer = await _customerRepository.Get(request.UpdateDto.Id ?? Guid.NewGuid());
+            var customer = await _customerRepository.Get(request.Id ?? Guid.NewGuid());
 
-            _mapper.Map(request.UpdateDto, customer);
+            _mapper.Map(request, customer);
 
             await _customerRepository.Update(customer);
 
