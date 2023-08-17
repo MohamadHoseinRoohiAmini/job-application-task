@@ -8,9 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Mc2.CrudTest.Application\Mc2.CrudTest.Application.csproj" />
+    <ProjectReference Include="..\..\Mc2.CrudTest.Infrastructure\Mc2.CrudTest.Data\Mc2.CrudTest.Data.csproj" />
     <ProjectReference Include="..\Client\Mc2.CrudTest.Presentation.Client.csproj" />
     <ProjectReference Include="..\Shared\Mc2.CrudTest.Presentation.Shared.csproj" />
   </ItemGroup>
