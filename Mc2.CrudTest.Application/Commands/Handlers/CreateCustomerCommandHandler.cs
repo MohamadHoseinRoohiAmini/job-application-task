@@ -31,7 +31,7 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
 
             if (!validationResult.IsValid)
                 throw new CustomerDataNotValidateForCreateException();
-
+            
             try
             {
                 var number = _phoneNumberUtil.parse(request.PhoneNumber, "US"); // can be any country
