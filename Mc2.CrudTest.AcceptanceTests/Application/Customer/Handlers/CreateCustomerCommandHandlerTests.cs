@@ -18,7 +18,6 @@ namespace Mc2.CrudTest.AcceptanceTests.Application.Customer.Handlers
     {
         private readonly Mock<ICustomerRepository> _repository;
         private readonly IMapper _mapper;
-        private readonly Mock<com.google.i18n.phonenumbers.PhoneNumberUtil> mockPhoneNumberUtil;
         private readonly Fixture fixture;
         private readonly CancellationToken cancellationToken;
         private readonly CreateCustomerCommandHandler handler;
@@ -26,7 +25,6 @@ namespace Mc2.CrudTest.AcceptanceTests.Application.Customer.Handlers
         public CreateCustomerCommandHandlerTests()
         {
             _repository = new Mock<ICustomerRepository>();
-            mockPhoneNumberUtil = new Mock<com.google.i18n.phonenumbers.PhoneNumberUtil>();
             var mapperConfig = new MapperConfiguration(c =>
             {
                 c.AddProfile<MappingProfile>();
@@ -36,7 +34,7 @@ namespace Mc2.CrudTest.AcceptanceTests.Application.Customer.Handlers
 
             fixture = new Fixture();
             cancellationToken = CancellationToken.None;
-            handler = new CreateCustomerCommandHandler(_repository.Object, _mapper, mockPhoneNumberUtil.Object);
+            handler = new CreateCustomerCommandHandler(_repository.Object, _mapper);
         }
         [Fact]
         public async Task Should_Throw_CustomerDataNotValidateForCreateException()
@@ -52,7 +50,7 @@ namespace Mc2.CrudTest.AcceptanceTests.Application.Customer.Handlers
         }
 
         [Fact]
-        public async Task Should_Throw_PhoneNumberNotValidException()
+        public async Task Should_Throw_PhoneNumberException()
         {
             //Arrange
             var command = fixture.Build<CreateCustomerCommand>()
@@ -60,20 +58,44 @@ namespace Mc2.CrudTest.AcceptanceTests.Application.Customer.Handlers
                                  .With(w => w.BankAccountNumber, "1234567890")
                                  .Create();
 
-            var mockPhoneNumberUtil = new Mock<com.google.i18n.phonenumbers.PhoneNumberUtil>();
-            mockPhoneNumberUtil.Setup(m => m.parse(It.IsAny<string>(), It.IsAny<string>()))
-                .Returns(new PhoneNumber
-                {
-                    CountryCode = 1,
-                    NationalNumber = 1234567890
-                });
-            mockPhoneNumberUtil.Verify(m => m.parse("+1-234-567-890", "US"), Times.Once);
-            var handler = new CreateCustomerCommandHandler(_repository.Object, _mapper, mockPhoneNumberUtil.Object);
+            //Act
+            var result = async () => await handler.Handle(command, cancellationToken);
+
+            //Assert
+            await result.Should().ThrowAsync<PhoneNumberException>();
+        }
+        [Fact]
+        public async Task Should_Throw_PhoneNumberNotValidException()
+        {
+            //Arrange
+            var command = fixture.Build<CreateCustomerCommand>()
+                                 .With(w => w.Email, "mhroohiamini@gmail.com")
+                                 .With(w => w.BankAccountNumber, "1234567890")
+                                 .With(w=>w.PhoneNumber , "+989011021716")
+                                 .Create();
+
             //Act
             var result = async () => await handler.Handle(command, cancellationToken);
 
             //Assert
             await result.Should().ThrowAsync<PhoneNumberNotValidException>();
+        }
+        [Fact]
+        public async Task Should_Add_Successfully()
+        {
+            //Arrange
+            var command = fixture.Build<CreateCustomerCommand>()
+                                 .With(w => w.Email, "mhroohiamini@gmail.com")
+                                 .With(w => w.BankAccountNumber, "1234567890")
+                                 .With(w=>w.PhoneNumber , "+1 (202)-555-1234")
+                                 .Create();
+
+            //Act
+            var result = await handler.Handle(command, cancellationToken);
+
+            //Assert
+            _repository.Verify(v=>v.Add(It.IsAny<Domain.Customer.Entities.Customer>()),Times.Once());
+            result.Should().NotBeEmpty();
         }
     }
 }

@@ -18,11 +18,11 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
         private readonly ICustomerRepository _customerRepository;
         private readonly IMapper _mapper;
         private readonly PhoneNumberUtil _phoneNumberUtil;
-        public CreateCustomerCommandHandler(ICustomerRepository customerRepository, IMapper mapper , PhoneNumberUtil phoneNumberUtil)
+        public CreateCustomerCommandHandler(ICustomerRepository customerRepository, IMapper mapper)
         {
             _customerRepository = customerRepository;
             _mapper = mapper;
-            _phoneNumberUtil = phoneNumberUtil;
+            _phoneNumberUtil = PhoneNumberUtil.getInstance();
         }
         public async Task<Guid> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
         {
@@ -35,14 +35,14 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
             try
             {
                 var number = _phoneNumberUtil.parse(request.PhoneNumber, "US"); // can be any country
-                if (!_phoneNumberUtil.isValidNumber(number) || _phoneNumberUtil.getNumberType(number) != PhoneNumberType.MOBILE)
+                if (!_phoneNumberUtil.isValidNumber(number) && _phoneNumberUtil.getNumberType(number) != PhoneNumberType.MOBILE)
                 {
                     throw new PhoneNumberNotValidException();
                 }
             }
             catch (NumberParseException)
             {
-                throw new PhoneNumberNotValidException();
+                throw new PhoneNumberException();
             }
 
             var customer = _mapper.Map<Customer>(request);
