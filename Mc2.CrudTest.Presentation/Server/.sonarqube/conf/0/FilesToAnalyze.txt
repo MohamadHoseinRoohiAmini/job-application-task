@@ -1,0 +1,10 @@
+﻿F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Core\Mc2.CrudTest.Domain\Common\BaseEntity.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Core\Mc2.CrudTest.Domain\Customer\Dtoes\CreateCustomerDto.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Core\Mc2.CrudTest.Domain\Customer\Dtoes\CustomerDto.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Core\Mc2.CrudTest.Domain\Customer\Dtoes\UpdateCustomerDto.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Core\Mc2.CrudTest.Domain\Customer\Entities\Customes.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Core\Mc2.CrudTest.Domain\Customer\Exceptions\CustomerDataNotValidateForCreateException.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Core\Mc2.CrudTest.Domain\Customer\Exceptions\CustomerDataNotValidateForUpdateException.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Core\Mc2.CrudTest.Domain\Customer\Exceptions\CustomerNotCreated.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Core\Mc2.CrudTest.Domain\Customer\Exceptions\CustomerNotFoundException.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Core\Mc2.CrudTest.Domain\Customer\Exceptions\MobileNumberIsNotValid.cs

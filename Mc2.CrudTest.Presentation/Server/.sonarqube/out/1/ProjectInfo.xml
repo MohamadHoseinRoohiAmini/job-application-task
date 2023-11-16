@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>Mc2.CrudTest.Presentation.Shared</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>07193d5e-ffce-4783-97b3-4a96af5adf7b</ProjectGuid>
+  <FullPath>F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Presentation\Shared\Mc2.CrudTest.Presentation.Shared.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Presentation\Server\.sonarqube\conf\1\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Presentation\Server\.sonarqube\out\1\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Presentation\Server\.sonarqube\out\1</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>net7.0</TargetFramework>
+</ProjectInfo>

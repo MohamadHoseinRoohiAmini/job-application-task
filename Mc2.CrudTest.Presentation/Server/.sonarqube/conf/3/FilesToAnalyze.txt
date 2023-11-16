@@ -1,0 +1,7 @@
+﻿F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Infrastructure\Mc2.CrudTest.Data\CustomerDbContext.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Infrastructure\Mc2.CrudTest.Data\DataServiceRegistration.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Infrastructure\Mc2.CrudTest.Data\Migrations\20230817083200_init.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Infrastructure\Mc2.CrudTest.Data\Migrations\20230817083200_init.Designer.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Infrastructure\Mc2.CrudTest.Data\Migrations\CustomerDbContextModelSnapshot.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Infrastructure\Mc2.CrudTest.Data\Repositories\CustomerRepository.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Infrastructure\Mc2.CrudTest.Data\Repositories\GenericRepository.cs

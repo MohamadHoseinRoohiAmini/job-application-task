@@ -6,12 +6,21 @@ namespace Mc2.CrudTest.Domain.Customer.Entities
 {
     public class Customer : BaseEntity
     {
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public string FirstName { get; set; }
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public string LastName { get; set; }
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+
         public DateTime DateOfBirth { get; set; }
-        [Column(TypeName = "varchar(20)")]
-        public string? PhoneNumber { get; set; }
-        public string? Email { get; set; }
-        public string? BankAccountNumber { get; set; }
+        [Column(TypeName = "bigint")]
+        public ulong PhoneNumber { get; set; }
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public string Email { get; set; }
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public string BankAccountNumber { get; set; }
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     }
 }

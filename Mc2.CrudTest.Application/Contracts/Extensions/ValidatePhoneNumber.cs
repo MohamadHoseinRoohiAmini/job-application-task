@@ -1,6 +1,6 @@
 ﻿using static com.google.i18n.phonenumbers.PhoneNumberUtil;
 
-namespace Mc2.CrudTest.Application.Contracts.Abstraction
+namespace Mc2.CrudTest.Application.Contracts.Extensions
 {
     public static class ValidatePhone
     {

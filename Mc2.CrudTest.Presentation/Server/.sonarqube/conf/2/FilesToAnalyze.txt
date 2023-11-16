@@ -1,0 +1,17 @@
+﻿F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\ApplicationServiceRegistration.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Handlers\CreateCustomerCommandHandler.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Handlers\DeleteCustomerCommandHandler.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Handlers\UpdateCustomerCommandHandler.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Requests\CreateCustomerCommand.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Requests\DeleteCustomerCommand.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Requests\UpdateCustomerCommand.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Extensions\ValidatePhoneNumber.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Repositories\ICustomerRepository.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Repositories\IGenericRepository.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Validators\CreateCustomerDtoValidator.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Validators\PhoneNumberException.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Validators\PhoneNumberNotValidException.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Validators\UpdateCustomerDtoValidator.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Profiles\MappingProfile.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Queries\Handlers\GetCustomerRequestHandler.cs
+F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Queries\Requests\GetCustomerRequest.cs

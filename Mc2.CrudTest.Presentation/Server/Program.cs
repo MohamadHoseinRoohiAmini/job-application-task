@@ -6,6 +6,10 @@ namespace Mc2.CrudTest.Presentation
 {
     public class Program
     {
+        protected Program()
+        {
+            // Do something.
+        }
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Mc2.CrudTest.Application.Commands.Requests;
+using Mc2.CrudTest.Application.Contracts.Extensions;
 using Mc2.CrudTest.Application.Contracts.Repositories;
 using Mc2.CrudTest.Application.Contracts.Validators;
 using Mc2.CrudTest.Domain.Customer.Entities;
@@ -18,7 +19,7 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
         public CreateCustomerCommandHandler(ICustomerRepository customerRepository, IMapper mapper)
         {
             _customerRepository = customerRepository;
-            _mapper = mapper;            
+            _mapper = mapper;
         }
         public async Task<Guid> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
         {
@@ -27,7 +28,10 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
 
             if (!validationResult.IsValid)
                 throw new CustomerDataNotValidateForCreateException();
-            //Todo : Validate ValidatePhone. static method
+
+            var validationMobile = ValidatePhone.MethodValidate(request.PhoneNumber ?? string.Empty);
+            if (!validationMobile)
+                throw new MobileNumberIsNotValidException();
 
             var customer = _mapper.Map<Customer>(request);
 

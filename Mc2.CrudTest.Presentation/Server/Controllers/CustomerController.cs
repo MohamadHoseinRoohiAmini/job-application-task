@@ -31,7 +31,7 @@ namespace Mc2.CrudTest.Presentation.Server.Controllers
         [HttpPut("{id:guid}")]
         public async Task<ActionResult> Put(Guid id, [FromBody] UpdateCustomerCommand command)
         {
-            var response = await _mediator.Send(command);
+            await _mediator.Send(command);
             return Ok();
         }
 

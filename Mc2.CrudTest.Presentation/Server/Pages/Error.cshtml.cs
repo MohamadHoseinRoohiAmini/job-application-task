@@ -21,7 +21,7 @@ namespace Mc2.CrudTest.Presentation.Server.Pages
 
         public void OnGet()
         {
-            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;            
         }
     }
 }

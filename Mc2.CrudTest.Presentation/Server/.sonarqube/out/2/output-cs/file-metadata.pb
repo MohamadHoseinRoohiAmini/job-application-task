@@ -1,0 +1,20 @@
+g
+^F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\ApplicationServiceRegistration.csutf-8w
+nF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Handlers\CreateCustomerCommandHandler.csutf-8w
+nF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Handlers\DeleteCustomerCommandHandler.csutf-8w
+nF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Handlers\UpdateCustomerCommandHandler.csutf-8p
+gF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Requests\CreateCustomerCommand.csutf-8p
+gF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Requests\DeleteCustomerCommand.csutf-8p
+gF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Commands\Requests\UpdateCustomerCommand.csutf-8q
+hF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Extensions\ValidatePhoneNumber.csutf-8s
+jF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Repositories\ICustomerRepository.csutf-8r
+iF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Repositories\IGenericRepository.csutf-8x
+oF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Validators\CreateCustomerDtoValidator.csutf-8r
+iF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Validators\PhoneNumberException.csutf-8z
+qF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Validators\PhoneNumberNotValidException.csutf-8x
+oF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Contracts\Validators\UpdateCustomerDtoValidator.csutf-8`
+WF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Profiles\MappingProfile.csutf-8s
+jF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Queries\Handlers\GetCustomerRequestHandler.csutf-8l
+cF:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\Queries\Requests\GetCustomerRequest.csutf-8‘
+…F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\obj\Debug\netstandard2.1\.NETStandard,Version=v2.1.AssemblyAttributes.csutf-8‰
+~F:\Projects\RayanKar - JobTest - C#\Mc2.CrudTest.Application\obj\Debug\netstandard2.1\Mc2.CrudTest.Application.AssemblyInfo.csutf-8
